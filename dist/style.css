@@ -1,0 +1,423 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Pacifico&family=Raleway:wght@300;400;500&family=Sacramento&display=swap');
+
+/* colors */
+:root {
+    --pink: #e67a91;
+    --mint: #88d8b0;
+    --cream: #ffeead;
+    --light-blue: #C5E7D7;
+    --light-gray: #F6F2EF;
+    --brown: #3E2A2F;
+    --peach: #ED907A;
+    --purple: #3D2B57;
+}
+
+/* global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* content */
+body {
+    background-color: var(--peach);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    color: black;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* nav */
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;  
+}
+
+.header-logo {
+    color: var(--light-gray);
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.nav-ul {
+    list-style-type: none;
+    color: var(--light-gray);
+    display: flex;
+    gap: 20px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.btn:hover {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--light-gray);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.btn:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* HOMEPAGE */
+/* homepage header */  
+.border {
+	padding: 5px;
+	background: linear-gradient(110deg, var(--cream) 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, var(--light-blue) 34%, var(--mint) 34%);
+	background-size: 400% 400%;
+	background-position: 25% 50%;
+    animation: Gradient 5s ease infinite;
+	-webkit-animation: Gradient 5s ease infinite;
+	-moz-animation: Gradient 5s ease infinite;
+}
+
+.inner-cutout {
+	padding: 40px 0;
+	display: block;
+	background-color: var(--peach);
+	margin: 2%;
+	height: 300px;
+	background-size: 300%;
+	background-position:50% 50%;
+}
+
+.knockout {
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size: 50pt;
+	color: white;
+	background: linear-gradient(110deg, var(--cream) 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, var(--light-blue) 34%, var(--mint) 34%);
+	background-size: 400%;
+	-webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.knockout {
+    animation: Gradient 5s ease infinite;
+    -webkit-animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 30% 50%
+	}
+	50% {
+		background-position: 25% 50%
+	}
+	100% {
+		background-position: 30% 50%
+	}
+	
+}
+
+.main{
+	width: 500px;
+	height: auto;
+    padding: 50px 0 160px;
+}
+
+
+/* homepage gallery */
+.homepage-gallery {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.homepage-gallery :nth-child(1) {
+    order: 1;
+}
+.homepage-gallery :nth-child(2) {
+    order: 4;
+}
+.homepage-gallery :nth-child(3) {
+    order: 5;
+}
+.homepage-gallery :nth-child(4) {
+    order: 2;
+    background-color: var(--light-blue);
+}
+.homepage-gallery :nth-child(5) {
+    order: 3;
+    background-color: var(--mint);
+}
+.homepage-gallery :nth-child(6) {
+    order: 6;
+    background-color: var(--cream);
+}
+
+.homepage-gallery-item {
+    width: 50%;
+    border: none;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.homepage-gallery-picture {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.homepage-gallery-header {
+    padding-top: 180px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.homepage-gallery-p {
+    letter-spacing: .06em;
+    line-height: 1.8em;
+    padding: 30px 0;
+}
+
+.homepage-gallery-header, .homepage-gallery-p {
+    word-break: break-word;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.homepage-gallery-button {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.homepage-gallery-button::after {
+    content: '';
+    background-color: #ffe54c;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.homepage-gallery-button:hover::after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .homepage-gallery-button {
+        padding: 13px 50px 13px;
+    }
+}
+
+/* FLAVORS */
+/* flavors header */
+.flavors-header {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+    gap: 20px;
+}
+
+.flavors-header-h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+
+.flavors-header-p {
+    letter-spacing: .06em;
+    line-height: 1.8em;
+}
+
+.flavors-header-h1, .flavors-header-p {
+    word-break: break-word;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* flavors gallery */
+.flavors-gallery-container {
+    display: flex;
+    width: 100%;   
+    border: none;
+    background-color: var(--purple);
+}
+
+.flavors-gallery-item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flavors-gallery-picture {
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+}
+
+.flavors-gallery-list {
+    display: flex;
+    flex-direction: column;
+    color: var(--light-gray);
+    list-style-type: none;
+    width: 400px;
+    gap: 20px;
+}
+
+.flavor {
+    cursor: pointer;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 6px;
+}
+
+.flavor:hover {
+    font-weight: bold;
+    cursor: pointer;
+}   
+
+
+/* CONTACT PAGE */
+.contact-div {
+    background-color: var(--brown);
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 3; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div4 { grid-area: 3 / 1 / 4 / 2; }
+.div5 { grid-area: 3 / 2 / 4 / 3; }
+.div6 { grid-area: 4 / 1 / 5 / 2; }
+.div7 { grid-area: 4 / 2 / 5 / 3; }
+
+.contact-h4 {
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--peach);
+    padding-bottom: 20px;
+}
+
+.contact-p {
+    color: white;
+    font-size: 30px;
+}
+
+/* footer */
+footer {
+    padding: 80px 50px;
+    background-color: var(--light-gray);
+    width: 100%;
+    color: black;
+    font-size: 12px;
+}
+
+.footer-logo {
+    color: var(--peach);
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+footer i {
+    margin-left: 8px;
+}
+
