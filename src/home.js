@@ -36,9 +36,9 @@ function createHomeGallery() {
                         local store.<br><br>We have three beautifully designed Magic Cones Ice Cream carts 
                         available for events from weddings, corporate parties, fairs and markets.`]
     const galleryButtonText = [`OUR FLAVORS`, `GET IN TOUCH`, `BACK TO TOP`]
-    const galleryPictures = ['images/home-pic1.jpg',
-                             'images/home-pic2.jpg', 
-                             'images/home-pic3.jpg']
+    const galleryPictures = ['/images/home-pic1.jpg',
+                             '/images/home-pic2.jpg', 
+                             '/images/home-pic3.jpg']
 
     galleryPictures.forEach(picture => {
         const galleryPic = document.createElement('div')
